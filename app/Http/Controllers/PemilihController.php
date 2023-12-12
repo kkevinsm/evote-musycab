@@ -84,15 +84,16 @@ class PemilihController extends Controller
 
     public function import(Request $request)
     {
-        $data = Pemilih::all();
-        Excel::store(new PemilihsImport($data), 'output.pdf', 'public', null, [
-            'excel' => [
-                'pdf' => [
-                    'paper_size' => 'A4',
-                ],
-            ],
-        ]);
-        // Excel::import(new PemilihsImport,request()->file('file'));
+        // $data = Pemilih::all();
+        // Excel::store(new PemilihsImport($data), 'output.pdf', 'public', null, [
+        //     'excel' => [
+        //         'pdf' => [
+        //             'paper_size' => 'A4',
+        //         ],
+        //     ],
+        // ]);
+
+        Excel::import(new PemilihsImport,request()->file('file'));
 
         return redirect()->back()->with('status', 'Data berhasil diimport!');
     }

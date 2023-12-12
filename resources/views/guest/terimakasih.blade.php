@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <link rel="shortcut icon" href="public/assets/img/favicon.ico">
-  <title>Evote | VOCATAMA</title>
+  <title>Evote | UNTAG</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,7 +37,7 @@
                             </div>
                             <h2>Terima kasih!</h2>
                             <p class="lead">
-                                Semoga IPM VOCATAMA dapat melanjutkan tongkat estafet perjuangan yang lebih baik lagi!
+                                Semoga IPM UNTAG dapat melanjutkan tongkat estafet perjuangan yang lebih baik lagi!
                             </p>
                               <div>
                                 <a class="dropdown-item has-icon btn-danger" href="{{ route('logout') }}"  style="color:#fff"

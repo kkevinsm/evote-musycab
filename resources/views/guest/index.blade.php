@@ -13,7 +13,7 @@
 <section class="section">
     <form action="{{ route('guest.ipm') }}" method="POST">
         <div class="section-header" style="color:#262626">
-            <h1  style="color:#262626">E-Vote VOCATAMA</h1>
+            <h1  style="color:#262626">E-Vote UNTAG</h1>
             <div class="col">
                 <div class="float-right">
                     <button id="toastr" type="button" class="btn btn-success" onclick="toast()">Submit</button>
@@ -72,7 +72,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Foto Calon Formatur</h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Foto Calon</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

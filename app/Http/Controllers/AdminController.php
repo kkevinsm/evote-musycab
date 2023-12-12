@@ -11,6 +11,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\UsersImport;
 use App\Imports\PemilihsImport;
 use App\Models\Pemilih;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -33,19 +34,19 @@ class AdminController extends Controller
         $belums = count(User::where('role_id', 2)->where('status', 1)->get());
         $pilihans = Pilihan::all();
 
-        $suara_ipm_1 = count(Pilihan::where('untuk', '1')->get());
-        $suara_ipm_2 = count(Pilihan::where('untuk', '2')->get());
-        $suara_ipm_3 = count(Pilihan::where('untuk', '3')->get());
-        $suara_ipm_4 = count(Pilihan::where('untuk', '4')->get());
-        $suara_ipm_5 = count(Pilihan::where('untuk', '5')->get());
+        $suara_ipm_1 = count(Pilihan::where('untuk', '32')->get());
+        $suara_ipm_2 = count(Pilihan::where('untuk', '33')->get());
+        $suara_ipm_3 = count(Pilihan::where('untuk', '34')->get());
+        $suara_ipm_4 = count(Pilihan::where('untuk', '35')->get());
+        $suara_ipm_5 = count(Pilihan::where('untuk', '36')->get());
 
-        $suara_ipm_6 = count(Pilihan::where('untuk', '6')->get());
-        $suara_ipm_7 = count(Pilihan::where('untuk', '7')->get());
-        $suara_ipm_8 = count(Pilihan::where('untuk', '8')->get());
-        $suara_ipm_9 = count(Pilihan::where('untuk', '9')->get());
-        $suara_ipm_10 = count(Pilihan::where('untuk', '10')->get());
+        $suara_ipm_6 = count(Pilihan::where('untuk', '37')->get());
+        $suara_ipm_7 = count(Pilihan::where('untuk', '38')->get());
+        $suara_ipm_8 = count(Pilihan::where('untuk', '39')->get());
+        $suara_ipm_9 = count(Pilihan::where('untuk', '40')->get());
+        $suara_ipm_10 = count(Pilihan::where('untuk', '41')->get());
 
-        $suara_ipm_11 = count(Pilihan::where('untuk', '11')->get());
+        $suara_ipm_11 = count(Pilihan::where('untuk', '42')->get());
         $suara_ipm_12 = count(Pilihan::where('untuk', '12')->get());
         $suara_ipm_13 = count(Pilihan::where('untuk', '13')->get());
         $suara_ipm_14 = count(Pilihan::where('untuk', '14')->get());
@@ -180,6 +181,22 @@ class AdminController extends Controller
         ]);
 
         // Excel::import(new PemilihsImport,request()->file('file'));
+
+        return redirect()->back();
+    }
+
+    public function reset()
+    {
+        $pemilihs = Pilihan::all();
+        $users = User::all();
+
+        foreach($pemilihs as $pemilih){
+            $pemilih->delete();
+        }
+
+        foreach($users as $user){
+            $user->update(['status' => '1']);
+        }
 
         return redirect()->back();
     }

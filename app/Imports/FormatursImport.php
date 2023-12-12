@@ -18,7 +18,8 @@ class FormatursImport implements ToModel
             'nama' => $row[0],
             'visi' => $row[1],
             'misi' => $row[2],
-            'image' => 'avatar-4.png',
+            'role' => $row[3],
+            'image' => $row[4],
         ]);
     }
 }

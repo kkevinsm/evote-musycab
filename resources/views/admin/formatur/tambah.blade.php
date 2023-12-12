@@ -3,11 +3,11 @@
 @section('content')
 <section class="section">
     <div class="section-header">
-        <h1>Formatur</h1>
+        <h1>Calon</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
             <div class="breadcrumb-item active"><a href="#">Data User</a></div>
-            <div class="breadcrumb-item">Formatur</div>
+            <div class="breadcrumb-item">Calon</div>
         </div>
     </div>
 
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Tambah Formatur</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Tambah Calon</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

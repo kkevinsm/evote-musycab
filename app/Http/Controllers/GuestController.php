@@ -12,6 +12,28 @@ use App\Models\User;
 class GuestController extends Controller
 {
 
+    public function guest()
+    {
+        $user = Auth::user();
+        $dpms = Formatur::where('role', 'Calon Ketua Dewan Perwakilan Mahasiswa')->get();
+        $bems = Formatur::where('role', 'Calon Ketua Badan Eksekutif Mahasiswa')->get();
+        $himajemens = Formatur::where('role', 'Calon Ketua HIMAJEMEN')->get();
+        $himatansis = Formatur::where('role', 'Calon Ketua HIMATANSI')->get();
+        $himabisniss = Formatur::where('role', 'Calon Ketua HIMABISNIS')->get();;
+
+        $pemilih = Pemilih::where('nama', $user->name)->first();
+
+        return view('guest.guest', compact([
+            'dpms',
+            'bems',
+            'himajemens',
+            'himatansis',
+            'himabisniss',
+            'user',
+            'pemilih',
+        ]));
+    }
+
     public function ipm()
     {
         $datas = Formatur::all();
@@ -94,7 +116,10 @@ class GuestController extends Controller
             'status' => 0,
         ]);
 
-        return redirect()->route('terimakasih')->with('status', 'Terimakasih telah memilih!');
+        Auth::logout();
+
+        // Redirect to the login page or any other page after logout
+        return redirect('/login');
     }
 
     // public function logout()

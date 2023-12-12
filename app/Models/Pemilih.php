@@ -11,7 +11,9 @@ class Pemilih extends Model
 
     protected $fillable = [
         'nama',
-        'asal',
+        'nim',
+        'tahun',
+        'nama_prodi',
         'role_id',
         'username',
         'pass',

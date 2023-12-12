@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <link rel="shortcut icon" href="public/assets/img/favicon.ico">
-  <title>Evote | VOCATAMA</title>
+  <title>Evote | UNTAG</title>
   <link rel="icon" type="images/x-icon" href="{{asset('assets/images/evote.png')}}" />
 
   <!-- General CSS Files -->
@@ -65,10 +65,10 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Evote VOCATAMA</a>
+            <a href="/">Evote UNTAG</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">SMP</a>
+            <a href="/">UNTAG</a>
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
@@ -80,6 +80,7 @@
               <li class="nav-item">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Data</span></a>
                 <ul class="dropdown-menu">
+                  <li><a href="{{ route('pilihan.index') }}">Data Pilihan</a></li>
                   <li><a href="{{ route('formatur.index') }}">Data Calon</a></li>
                   <li><a href="{{ route('pemilih.index') }}">Data Pemilih</a></li>
                 </ul>
@@ -95,13 +96,6 @@
         @yield('content')
         @yield('footer')
       </div>
-      <footer class="main-footer">
-        <div class="footer-left">
-          Copyright &copy; 2023 <div class="bullet"></div> Made with ❤️ By <a href="#">Hangker Sepanjang</a>
-        </div>
-        <div class="footer-right">
-        </div>
-      </footer>
     </div>
   </div>
   @else

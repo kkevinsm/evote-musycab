@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-header">
-                        <h4 style="color:#262626">Detail Calon Formatur</h4>
+                        <h4 style="color:#262626">Detail Calon Pemira</h4>
                     </div>
                 </div>
                 <div class="col-5 text-center gallery" style="align-items: flex-start!important;">
@@ -75,6 +75,11 @@
                             <div class="form-group mb-0">
                                 <label>Misi</label>
                                 <textarea name="misi" class="form-control" required>{{ $data->misi }}</textarea>
+                            </div>
+
+                            <div class="form-group mb-0">
+                                <label>Role</label>
+                                <textarea name="role" class="form-control" required>{{ $data->role }}</textarea>
                             </div>
                         </div>
                         <div class="card-footer text-right">

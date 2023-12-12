@@ -19,7 +19,7 @@ class CreateFormatursTable extends Migration
             $table->date('kelas')->nullable();
             $table->string('role')->nullable();
             $table->string('visi')->nullable();
-            $table->string('misi')->nullable();
+            $table->longText('misi')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

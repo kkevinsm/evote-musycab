@@ -22,6 +22,7 @@ class PemilihsImport implements ToModel
         User::create([
             'name' => $row[0],
             'asal' => $row[1],
+            'tahun' => $row[3],
             'role_id' => 2,
             'username' => $username,
             'pass' => $password,
@@ -31,9 +32,12 @@ class PemilihsImport implements ToModel
 
         return new Pemilih([
             'nama' => $row[0],
-            'asal' => $row[1],
+            'nim' => $row[1],
+            'nama_prodi' => $row[2],
+            'tahun' => $row[3],
             'username' => $username,
             'pass' => $password,
+            'role_id' => 2,
             'status' => 1,
         ]);
     }

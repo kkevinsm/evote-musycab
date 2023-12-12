@@ -6,6 +6,7 @@ use App\Http\Controllers\GuestController;
 use App\Http\Controllers\FormaturController;
 use App\Http\Controllers\PemilihController;
 use App\Http\Controllers\Admin\AdminAuthController;
+use App\Http\Controllers\PilihanController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -38,7 +39,7 @@ Route::middleware(['admin'])->group(function() {
 
     Route::post('/formatur/import', [FormaturController::class, 'import'])->name('formatur.import');
 
-    
+    Route::get('/admin/pilihan/reset', [AdminController::class, 'reset'])->name('admin.reset');
     
     Route::get('/admin/pemilih/index', [PemilihController::class, 'index'])->name('pemilih.index');
     Route::get('/admin/pemilih/detail/{id}', [PemilihController::class, 'detail'])->name('pemilih.detail');
@@ -48,10 +49,17 @@ Route::middleware(['admin'])->group(function() {
     Route::get('/admin/pemilih/active', [PemilihController::class, 'active'])->name('active');
     Route::get('/admin/pemilih/non-active', [PemilihController::class, 'nonActive'])->name('non-active');
 
-    Route::get('/pemilih/import', [PemilihController::class, 'import'])->name('pemilih.import');
+    Route::get('/admin/pilihan/index', [PilihanController::class, 'index'])->name('pilihan.index');
+    Route::get('/admin/pilihan/{id}', [PilihanController::class, 'show'])->name('pilihan.show');
+    Route::get('/admin/pilihan/{id}/{userId}', [PilihanController::class, 'pilihan'])->name('pilihan.pilihan');
+
+
+
+    Route::post('/pemilih/import', [PemilihController::class, 'import'])->name('pemilih.import');
 });
 
 // Guest
+Route::get('/guest', [GuestController::class, 'guest'])->name('guest.guest');
 Route::get('/guest/ipm', [GuestController::class, 'ipm'])->name('guest.index');
 Route::post('/guest/pilih/ipm', [GuestController::class, 'pilihipm'])->name('guest.pilih.ipm');
 Route::get('/guest/terimakasih', [GuestController::class, 'terimakasih'])->name('terimakasih');

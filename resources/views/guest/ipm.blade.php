@@ -13,7 +13,7 @@
 <section class="section">
     <form action="{{ route('guest.submit') }}" method="POST">
         <div class="section-header" style="color:#262626">
-            <h1  style="color:#262626">Pilih Calon Formatur IPM VOCATAMA</h1>
+            <h1  style="color:#262626">Pilih Calon Pemira UNTAG</h1>
             <div class="col">
                 <div class="float-right">
                     <button id="toastr" type="button" class="btn btn-success" onclick="toast()">Submit</button>
@@ -119,7 +119,7 @@
     function toast() {
         iziToast.warning({
             title: 'Error',
-            message: 'Harus Pilih 9 Calon Formatur!',
+            message: 'Harus Pilih 9 Calon!',
             position: 'topCenter',
         });
     }
