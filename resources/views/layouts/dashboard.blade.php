@@ -121,9 +121,6 @@
             </form>
           </div>
         </div>
-        <div class="simple-footer mt-5">
-          Copyright &copy; Hangker Sepanjang 2023
-        </div>
       </div>
     </section>
   @endif

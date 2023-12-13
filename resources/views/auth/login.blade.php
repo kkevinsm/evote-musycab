@@ -134,9 +134,6 @@
                 </form>
             </div>
         </div>
-        <div class="simple-footer">
-            &copy; Made with ❤️ By <a href="#">Hangker Sepanjang</a>
-        </div>
         </div>
     </div>
     </div>
