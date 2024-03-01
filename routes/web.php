@@ -76,3 +76,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/admin/pemilih/export/view', [PemilihController::class, 'view'])->name('pemilih.pdf');
+
+
+Route::get('/admin/pemilih/export/dawwas', [PemilihController::class, 'view'])->name('dawwas');
